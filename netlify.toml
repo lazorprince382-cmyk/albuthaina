@@ -1,0 +1,56 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/images/al-buthaina/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[redirects]]
+  from = "/blog-grid.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-standard.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-single.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/events-list.html"
+  to = "/causes-list.html"
+  status = 301
+
+[[redirects]]
+  from = "/causes-single.html"
+  to = "/causes-list.html"
+  status = 301
+
+[[redirects]]
+  from = "/volunteers-single.html"
+  to = "/become-volunteers.html"
+  status = 301
+
+[[redirects]]
+  from = "/volunteers.html"
+  to = "/become-volunteers.html"
+  status = 301

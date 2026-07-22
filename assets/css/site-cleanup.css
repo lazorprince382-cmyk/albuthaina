@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #078735;
+  --primary-rgb: 7, 135, 53;
+  --secondary-color: #005e2a;
+  --secondary-rgb: 0, 94, 42;
+  --bistre-color: #0a2b18;
+  --bistre-rgb: 10, 43, 24;
+}
+
+.header-fullpage .navbar-brand img { max-height: 108px !important; }
+.header-fullpage .logo-small img { max-height: 82px !important; }
+.navbar-expand-lg .navbar-nav .nav-item:not(:last-child) { margin-right: 24px; }
+.top-bar-right .contact-info { gap: .35rem; }
+.breadcrumbs-page {
+  background-image: linear-gradient(90deg, rgba(4,32,17,.76), rgba(4,32,17,.25)), url('../images/al-buthaina/hero-clean-water.jpg') !important;
+  background-position: center 44% !important;
+  background-size: cover;
+}
+.breadcrumbs-page::before { background: transparent !important; }
+
+.clean-footer { padding: 64px 0 22px; color: rgba(255,255,255,.74); background: #061e10; }
+.clean-footer__grid { display: grid; grid-template-columns: 1.3fr .7fr .8fr; gap: 3rem; }
+.clean-footer__logo { width: 118px; height: 118px; object-fit: contain; margin-bottom: .8rem; }
+.clean-footer h2, .clean-footer h3 { color: #fff; }
+.clean-footer h3 { margin: 0 0 1rem; font-size: 1rem; }
+.clean-footer p { max-width: 440px; }
+.clean-footer__links { display: grid; gap: .55rem; }
+.clean-footer__links a { color: rgba(255,255,255,.76); text-decoration: none; }
+.clean-footer__links a:hover { color: #fff; }
+.clean-footer__bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.12); font-size: .82rem; }
+.clean-contact-card { padding: clamp(1.6rem, 4vw, 3rem); background: #f4f8f4; border: 1px solid #dbe7de; border-radius: 20px; }
+.clean-contact-card h2 { margin-bottom: 1rem; }
+.clean-contact-card .btn { margin-top: .75rem; }
+.bank-account-card { overflow: hidden; border: 1px solid #cfe3d4; border-radius: 18px; box-shadow: 0 14px 42px rgba(10,43,24,.08); }
+.bank-account-card__head { padding: 1rem 1.25rem; color: #fff; background: #005e2a; }
+.bank-account-card__body { padding: 1.25rem; }
+.bank-account-row { display: grid; grid-template-columns: 145px 1fr; gap: 1rem; padding: .8rem 0; }
+.bank-account-row + .bank-account-row { border-top: 1px solid #dbe7de; }
+.bank-account-row span { color: #617067; font-size: .85rem; }
+.bank-account-row strong { overflow-wrap: anywhere; }
+.payment-safety { margin-top: 1rem; padding: 1rem; background: #f4f8f4; border-radius: 12px; font-size: .9rem; }
+
+@media (max-width: 991px) {
+  .clean-footer__grid { grid-template-columns: 1fr 1fr; }
+  .clean-footer__grid > :first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .clean-footer__grid { grid-template-columns: 1fr; }
+  .clean-footer__grid > :first-child { grid-column: auto; }
+  .clean-footer__bottom { flex-direction: column; }
+  .bank-account-row { grid-template-columns: 1fr; gap: .2rem; }
+}
+
+/* Verified leadership team */
+.real-team-section { background: #f5f9f6; }
+.real-team-heading { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+.real-team-heading small { display: block; margin-bottom: .55rem; color: #07893f; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.real-team-heading h2 { margin: 0 0 .85rem; color: #072f1d; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; }
+.real-team-heading p { margin: 0; color: #617067; }
+.real-team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.real-team-card { overflow: hidden; background: #fff; border: 1px solid #dbe8df; border-radius: 18px; box-shadow: 0 14px 34px rgba(8, 52, 31, .08); }
+.real-team-photo { width: 100%; aspect-ratio: 1; overflow: hidden; background: #edf6ef; }
+.real-team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.real-team-photo--pending { display: grid; place-items: center; color: #076b34; background: linear-gradient(145deg, #e7f5ea, #f8fbf8); }
+.real-team-photo--pending span { display: grid; width: 104px; aspect-ratio: 1; place-items: center; border: 2px solid #bcdac5; border-radius: 50%; font-family: Georgia, "Times New Roman", serif; font-size: 2rem; font-weight: 700; }
+.real-team-copy { padding: 1.15rem 1.25rem 1.3rem; }
+.real-team-copy h3 { margin: 0 0 .25rem; color: #072f1d; font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; }
+.real-team-copy p { margin: 0; color: #07893f; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+@media (max-width: 991px) { .real-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575px) { .real-team-grid { grid-template-columns: 1fr; } }

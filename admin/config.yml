@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: lazorprince382-cmyk/albuthaina
+  branch: main
+
+site_url: https://albuthaina.netlify.app
+display_url: https://albuthaina.netlify.app
+logo_url: /assets/images/al-buthaina/al-buthaina-logo-nav-transparent.png
+publish_mode: editorial_workflow
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: field_updates
+    label: Field Updates
+    files:
+      - name: updates
+        label: Published Updates
+        file: content/updates.json
+        format: json
+        fields:
+          - label: Updates
+            name: updates
+            widget: list
+            summary: "{{fields.date}} - {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD }
+              - { label: Description, name: summary, widget: text }
+              - { label: Photograph, name: image, widget: image, required: false, hint: "Upload only photographs approved for public use." }
+              - { label: Image description, name: alt_text, widget: string, required: false, hint: "Briefly describe the photograph for visitors using screen readers." }
+              - { label: Video file, name: video_file, widget: file, required: false, media_library: { config: { multiple: false } }, hint: "Upload a short compressed MP4 or WebM file. For a longer video, use the video URL field instead." }
+              - { label: Video URL, name: video_url, widget: string, required: false, hint: "Paste a public HTTPS YouTube or Vimeo link. Do not upload large video files here." }
+              - { label: Published, name: published, widget: boolean, default: true }
