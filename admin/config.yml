@@ -6,6 +6,7 @@ backend:
 site_url: https://albuthaina.netlify.app
 display_url: https://albuthaina.netlify.app
 logo_url: /assets/images/al-buthaina/al-buthaina-logo-nav-transparent.png
+preview_styles: /admin/preview.css
 publish_mode: editorial_workflow
 media_folder: assets/uploads
 public_folder: /assets/uploads
